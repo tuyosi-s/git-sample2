@@ -20,16 +20,18 @@ echo add(3,3);
 
 
 
-//課題２　作成した関数名：multiplied2
+//課題３　作成した関数名：multiplied2
 function multiplied2($arr){
+//とりあえず配列の最初の要素を変数に入れる
     $total = $arr[0];
-    for($i = 0;$i < count($arr);$i ++){
+//配列の２番目から順に掛け算を行う
+    for($i = 1;$i < count($arr);$i ++){
     $total = $total * $arr[$i];
     }
     return $total;
 }
 
-//array(1,3,7,9)を引数に渡して計算
+//array(1,3,5,7,9)を引数に渡して計算
 $arry = array(1,3,5,7,9);
 
 echo multiplied2($arry);
@@ -47,9 +49,16 @@ foreach($arr as $a)
 }
 
  $arry = array(1,3,5,7,9);
-//課題４　テスト
+//課題４　引数に$arry を入れて計算する
 
 echo max_number($arry);
+
+//課題４　テスト
+$arry2 = array(3,1,7,11,2,19,5);
+echo max_number($arry2);
+
+$arry3 = array(8,6,9,11,2,3);
+echo max_number($arry3);
 
 /*課題５　array_push 
 用途：配列の末尾に要素を追加する時に使用する鵜。
