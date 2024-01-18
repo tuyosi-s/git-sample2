@@ -23,11 +23,11 @@ echo add(3,3);
 //課題３　作成した関数名：multiplied2
 function multiplied2($arr){
 //とりあえず配列の最初の要素を変数に入れる
-    $total = $arr[0];
+    $total = 1;
 //配列の２番目から順に掛け算を行う
-    for($i = 1;$i < count($arr);$i ++){
-    $total = $total * $arr[$i];
-    }
+      for($i = 0;$i < count($arr);$i ++){
+          $total = $total * $arr[$i];
+      }
     return $total;
 }
 
@@ -38,14 +38,15 @@ echo multiplied2($arry);
 
 //課題４
 function max_number($arr){
-//とりあえず配列の最初の要素を１番大きい値とする
-$max_number = $arr[0];
-foreach($arr as $a)
-//ここで配列の中の一番大きい値を探したい
-    if($max_number < $a){
-        $max_number = $a;
-    }
-    return $max_number;
+   //とりあえず配列の最初の要素を１番大きい値とする
+   $max_number = $arr[0];
+   foreach($arr as $a){
+    //ここで配列の中の一番大きい値を探したい
+       if($max_number < $a){
+           $max_number = $a;
+       }
+   }
+   return $max_number;
 }
 
  $arry = array(1,3,5,7,9);
@@ -112,3 +113,5 @@ echo $time2;
 　　　　第１引数に入れるフォーマット例　「"Y年m月d日　H時i分s秒"」や「"Y-m-d"」等*/
 //実際に使用する
 echo date("Y-m-d H時i分s秒",1709640930);
+
+
